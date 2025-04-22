@@ -6,7 +6,7 @@ public class main {
 
         // Creacion de los hilos de procesos y de Log.
         Thread hiloLog = new Thread(new Log(););
-        Threa hilos[] = new Thread[10];
+        Thread hilos[] = new Thread[10];
 
         // Asignacion de procesos a cada hilo.
         for(int i = 0; i < 10; i++){
