@@ -1,3 +1,5 @@
+package app;
+
 public class Usuarios{
     private final int id;
     private final Pedido pedido; // Pedido con el que se trabajara

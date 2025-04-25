@@ -1,12 +1,19 @@
-public class main {
+package app;
+
+import procesos.Preparacion;
+import procesos.Despacho;
+import procesos.Entrega;
+import procesos.Verificacion;
+
+public class Main {
     // Constantes que definen la simulacion
     // Los valores son tomados del enunciado
     private static final int cantidadPedidosMax = 500; // Maxima cantidad de pedidos que se van a recibir
     private static final int filasMatriz = 10;
     private static final int columnasMatriz = 20;
-    private static final float probErrorDespacho = 0.15;
-    private static final float probErrorEntregas = 0.10;
-    private static final float probErrorVerificacion = 0.05;
+    private static final double probErrorDespacho = 0.15;
+    private static final double probErrorEntregas = 0.10;
+    private static final double probErrorVerificacion = 0.05;
 
     // Definimos los tiempos para cada proceso
     private static final int demoraPreparacion = 1000;
@@ -16,35 +23,35 @@ public class main {
     private static final int demoraLog = 200; //200ms
 
     // Constructor: Instancia los objetos y lanza los hilos
-    public  static void main(String[] args){
-        // Instanciacion de las clases RegistroPedidos y MatrizCasilleros
-        RegistroPedidos  registros = new RegistroPedidos();
+    public static void main(String[] args){
+        // Instanciacion de las clases app.RegistroPedidos y app.MatrizCasilleros
+        RegistroPedidos registros = new RegistroPedidos();
         MatrizCasilleros matrizCasilleros = new MatrizCasilleros(filasMatriz, columnasMatriz);
 
-        // Creacion de los hilos de procesos y de Log
-        Thread hiloLog = new Thread(new Log(matrizCasilleros, registros, demoraLog););
-        Thread hilos[] = new Thread[10];
+        // Creacion de los hilos de procesos y de app.Log
+        Thread hiloLog = new Thread(new Log(matrizCasilleros, registros, demoraLog));
+        Thread[] hilos = new Thread[10];
 
         // Asignacion de procesos a cada hilo.
         for(int i = 0; i < 10; i++){
             switch(i) {
                 case 0: case 1: case 2: // Preparacion de pedidos
-                    hilos[i] = new Thread(new PreparacionPedido(registros, demoraPreparacion, matrizCasilleros, cantidadPedidosMax));
+                    hilos[i] = new Thread(new Preparacion(registros, demoraPreparacion, matrizCasilleros, cantidadPedidosMax));
                     break;
                 case 3: case 4: // Despacho de pedidos
-                    hilos[i] = new Thread(new DespachoPedido(registros, demoraDespacho, matrizCasilleros, probErrorDespacho));
+                    hilos[i] = new Thread(new Despacho(registros, demoraDespacho, matrizCasilleros, cantidadPedidosMax, probErrorDespacho));
                     break;
                 case 5: case 6: case 7: // Entrega al cliente
-                    hilos[i] = new Thread(new EntregaCliente(registros, demoraEntregas, probErrorEntregas));
+                    hilos[i] = new Thread(new Entrega(registros, demoraEntregas, cantidadPedidosMax, probErrorEntregas));
                     break;
                 case 8: case 9: // Verificación final
-                    hilos[i] = new Thread(new VerificacionFinal(registros, demoraVerificacion, probErrorVerificacion);
+                    hilos[i] = new Thread(new Verificacion(registros, demoraVerificacion, cantidadPedidosMax, probErrorVerificacion));
                     break;
             }
         }
 
         // Iniciar todos los hilos
-        loggerThread.start();
+        hiloLog.start();
         for (int i = 0; i < 10; i++) {
             hilos[i].start();
         }
@@ -60,7 +67,11 @@ public class main {
 
         // Detiene el hilo logger
         Log.detener();
-        hiloLog.join();
+        try {
+            hiloLog.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         System.out.println("\n---------------- Simulación finalizada ----------------\n");
     }

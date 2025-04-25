@@ -1,3 +1,5 @@
+package app;
+
 public class Pedido {
     private int[] posicionCasillero; // Posicion del casillero asociado al pedido
     private final int idUsuario;  // Indicador del Usuario que creo el pedido
@@ -7,15 +9,15 @@ public class Pedido {
         this.idUsuario = idUsuario;
     }
 
-    public int getIdUsuario(){
+    public synchronized int getIdUsuario(){
         return idUsuario;
     }
 
-    public int getPosicionCasillero() {
+    public synchronized int [] getPosicionCasillero() {
         return posicionCasillero;
     }
 
-    public void setPosicionCasillero(int[] posicionCasillero) {
+    public synchronized  void setPosicionCasillero(int[] posicionCasillero) {
         this.posicionCasillero = posicionCasillero;
     }
 }

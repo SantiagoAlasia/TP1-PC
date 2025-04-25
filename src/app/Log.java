@@ -1,3 +1,5 @@
+package app;
+
 import java.io.FileWriter; // Permite escribir texto en un archivo (crea o abre un archivo log.txt y prmite escribir un texto )
 import java.io.PrintWriter; //lo vamos a usar para escribir el log linea por linea de forma legible
 import java.io.IOException; // usamos el try/catch para atrapar error al abir o escribir el log.txt
@@ -7,7 +9,7 @@ public class Log implements Runnable {
     private final RegistroPedidos registros; //Consulta pedidos fallidos / verificados
     private final MatrizCasilleros matrizCasilleros; // Permite acceder a los casileros
     private final long inicio; //guarda el tiempo de inicio del programa
-    private boolean ejecutar = true; //control para detener el hilo
+    private static boolean ejecutar = true; //control para detener el hilo
     private int demora; //tiempo que debera esperar entre escritura y escritura
 
     //constructor: recibe la lista de pedidos y la matriz de casilleros
@@ -19,7 +21,7 @@ public class Log implements Runnable {
     }
 
     //Metodo que permite detener el hilo desde afuera
-    public void detener () {
+    public static void detener () {
         ejecutar = false;
     }
 
@@ -33,23 +35,23 @@ public class Log implements Runnable {
             while (ejecutar) {
                 //Obtenemos la cantidad actual de pedidos fallidos y verificados
                 int fallidos = registros.getCantidadPedidos (3);
-                int verificados = registros.getCantidadVerificados (4);
+                int verificados = registros.getCantidadPedidos (4);
 
                 //Escribimos una linea con esos valores
                 log.println("Fallidos: " + fallidos + "      Verificados: " + verificados);
                 log.flush(); //forzamos que escriba el archivo sin esperar
-                Thread.sleep (200); //esperamos 200 ms antes de repetir
+                Thread.sleep (demora); //esperamos 200 ms antes de repetir
             }
             // cuando el hilo se detiene escribimos estadísticas finales
             log.println("\n --- Estadísticas Finales ---");
 
             Casillero[][] matriz = matrizCasilleros.getMatriz(); //obtenemos la matriz completa
-            for (int i = 0; i < matrizCasilleros.getCantFilas(); i++) {
-                for (int j = 0; j < matrizCasilleros.getCantColumnas(); j++) {
+            for (int i = 0; i < matrizCasilleros.getFilas(); i++) {
+                for (int j = 0; j < matrizCasilleros.getColumnas(); j++) {
                     Casillero c = matriz[i][j];
 
                     // cuantas veces el casillero fue ocupado y su estado final
-                    log.println("Casillero [" + i + "][" + j + "]: " + c.toString());
+                    log.println("app.Casillero [" + i + "][" + j + "]: " + c.toString());
                 }
             }
             //tiempo total de ejecucion
@@ -60,7 +62,7 @@ public class Log implements Runnable {
 
         } catch (IOException | InterruptedException e){
             e.printStackTrace();
-            System.out.println("Error en con el Log");
+            System.out.println("Error en con el app.Log");
             //si hubo un error al escribir el archivo o al dormir el hilo lo mostramos
         }
     }

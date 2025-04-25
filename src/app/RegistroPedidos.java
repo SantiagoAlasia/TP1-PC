@@ -1,15 +1,17 @@
+package app;
+
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class RegistroPedidos(){
+public class RegistroPedidos {
     Queue<Pedido> pedidosEnPreparacion;
     Queue<Pedido> pedidosEnTransito;
     Queue<Pedido> pedidosEntregados;
     Queue<Pedido> pedidosFallidos;
-    Queue<Pedido> pedidosVerificados
+    Queue<Pedido> pedidosVerificados;
 
-    // Constructor: Inicializa toda las Colas
-    public static RegistroPedidos(){
+    // Constructor: Inicializa todas las Colas
+    public RegistroPedidos(){
         pedidosEnPreparacion = new ArrayDeque<>();
         pedidosEnTransito = new ArrayDeque<>();
         pedidosEntregados = new ArrayDeque<>();
@@ -23,7 +25,7 @@ public class RegistroPedidos(){
     //    destino == 2 => Pedidos Entregados
     //    destino == 3 => Pedidos Fallidos
     //    destino == 4 => Pedidos Verificados
-    public void agregarPedido(Pedido pedido, int destino){
+    public synchronized void agregarPedido(Pedido pedido, int destino){
         switch(destino){
             case 0:
                 pedidosEnPreparacion.add(pedido);
@@ -51,26 +53,20 @@ public class RegistroPedidos(){
     //    destino == 2 => Pedidos Entregados
     //    destino == 3 => Pedidos Fallidos
     //    destino == 4 => Pedidos Verificados
-    public Pedido eliminarPedido(int destino){
+    public synchronized Pedido eliminarPedido(int destino){
         switch(destino){
             case 0:
                 return  pedidosEnPreparacion.remove();
-                break;
             case 1:
                 return pedidosEnTransito.remove();
-                break;
             case 2:
                 return pedidosEntregados.remove();
-                break;
             case 3:
                 return pedidosFallidos.remove();
-                break;
             case 4:
                 return pedidosVerificados.remove();
-                break;
             default:
                 return null;
-                break;
         }
     }
 
@@ -81,28 +77,22 @@ public class RegistroPedidos(){
     //    destino == 3 => Pedidos Fallidos
     //    destino == 4 => Pedidos Verificados
     //    destino == 5 => Total de pedidos
-    public int getCantidadPedidos(int destino){
+    public synchronized int getCantidadPedidos(int destino){
         switch(destino){
             case 0:
                 return pedidosEnPreparacion.size();
-                break;
             case 1:
                 return pedidosEnTransito.size();
-                break;
             case 2:
                 return pedidosEntregados.size();
-                break;
             case 3:
                 return pedidosFallidos.size();
-                break;
             case 4:
                 return pedidosVerificados.size();
-                break;
             case 5:
                 return (pedidosEnPreparacion.size() + pedidosEnTransito.size() + pedidosEntregados.size() + pedidosFallidos.size() + pedidosVerificados.size());
             default:
-                return null;
-                break;
+                return -1;
         }
     }
 }

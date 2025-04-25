@@ -1,12 +1,16 @@
-public abstract class Procesos implements Runnable{
+package procesos;
+
+import app.RegistroPedidos;
+
+public abstract class Proceso implements Runnable{
     protected int demora;
     protected RegistroPedidos registros;
-    protected cantidadPedidosMax;
+    protected int cantidadPedidosMax;
 
-    public Proceso(int demora, RegistroPedidos registros, int cantiadaPedidos){
+    public Proceso(int demora, RegistroPedidos registros, int cantiadadPedidos){
         this.demora = demora;
         this.registros = registros;
-        this.cantidadPedidosMax = cantiadaPedidos;
+        this.cantidadPedidosMax = cantiadadPedidos;
     }
 
     protected void demorar() {
@@ -18,5 +22,5 @@ public abstract class Procesos implements Runnable{
     }
 
     @Override
-    public void run();
+    public void run(){}
 }

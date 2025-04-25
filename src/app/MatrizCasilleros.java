@@ -1,3 +1,5 @@
+package app;
+
 import java.util.Random;
 
 public class MatrizCasilleros {
@@ -14,26 +16,27 @@ public class MatrizCasilleros {
     }
 
     // Inicializa todos los casilleros de la matriz como vacios
-    private void inicializarcasilleros() {
+    // Solo se usa por el constructor, por lo que no es nesesario usar SYNCRONIZED
+    private void inicializarCasilleros() {
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
-                matriz[i][j] = new Casillero(idCasillero);
+                matriz[i][j] = new Casillero();
             }
         }
     }
 
     // Buscaremos de manera aleatoria casilleros que esten vacios y retornaremos la posicion dentro de la matriz
     // Si no se encuentran casilleros, se retornara null
-    public int[] obtenerPosicionCasilleroDisponible() {
+    public synchronized int[] obtenerPosicionCasilleroDisponible() {
         int [] posicion  = {0, 0};
-        Casillero c;
+        Random random = new Random();
 
         for (int intento = 0; intento < 200; intento++) {
             posicion[0] = random.nextInt(filas);
             posicion[1] = random.nextInt(columnas);
             Casillero c = matriz[posicion[0]][posicion[1]];
 
-            if (c.getEstado == EstadoCasillero.VACIO){
+            if (c.getEstado() == EstadoCasillero.VACIO){
                 return posicion;
             }
         }
@@ -41,15 +44,29 @@ public class MatrizCasilleros {
     }
 
     // Para la estadistica, metodo para obtener todos la matriz de casilleros
-    public Casillero[][] getMatriz() {
+    public synchronized Casillero[][] getMatriz() {
         return matriz;
     }
 
+    // Unicamente lo utiliza el hiloLog por lo que no es nesesario usar SYNCRONIZED
     public int getFilas(){
         return filas;
     }
 
+    // Unicamente lo utiliza el hiloLog por lo que no es nesesario usar SYNCRONIZED
     public int getColumnas() {
         return columnas;
+    }
+
+    public synchronized boolean ocuparCasillero(int[] posicion) {
+        return matriz[posicion[0]][posicion[1]].ocupar();
+    }
+
+    public synchronized void liberarCasillero(int[] posicion) {
+        matriz[posicion[0]][posicion[1]].liberar();
+    }
+
+    public synchronized void marcarCasilleroFueraDeServicio(int[] posicion) {
+        matriz[posicion[0]][posicion[1]].marcarFueraDeServicio();
     }
 }

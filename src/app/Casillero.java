@@ -1,3 +1,5 @@
+package app;
+
 public class Casillero {
     private EstadoCasillero estado;
     private int contador;
@@ -8,17 +10,18 @@ public class Casillero {
         this.contador = 0;
     }
 
-    public EstadoCasillero getEstado(){
+    public synchronized EstadoCasillero getEstado() {
         return estado;
     }
 
+    // No es SYNCRONIZED ya que solo hara uso de este metodo el UNICO hiloLog
     public String toString() {
         return "ocupado " + contador + " veces, con estado final: " + estado ;
     }
 
     // Cambia el estado si es que es valido el cambio
-    public boolean ocupar() {
-        if (estado = EstadoCasillero.VACIO){
+    public synchronized boolean  ocupar() {
+        if (estado == EstadoCasillero.VACIO){
             estado = EstadoCasillero.OCUPADO;
             contador++;
             return true;
@@ -26,11 +29,11 @@ public class Casillero {
         return false; // No es posible cambiar de estado
     }
 
-    public void liberar() {
+    public synchronized void liberar() {
         estado = EstadoCasillero.VACIO;
     }
 
-    public void marcarFueraDeServicio() {
+    public synchronized void marcarFueraDeServicio() {
         estado = EstadoCasillero.FUERA_DE_SERVICIO;
     }
 }

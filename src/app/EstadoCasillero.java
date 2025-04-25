@@ -1,5 +1,6 @@
-// Posibles estados de los casilleros
+package app;
 
+// Posibles estados de los casilleros
 public enum EstadoCasillero {
     VACIO,
     OCUPADO,
