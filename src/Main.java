@@ -15,10 +15,11 @@ public class main {
     private static final int demoraVerificacion = 750;
     private static final int demoraLog = 200; //200ms
 
+    // Constructor: Instancia los objetos y lanza los hilos
     public  static void main(String[] args){
-        // Instanciacion de las clases ListaDePedidos y MatrizCasilleros
+        // Instanciacion de las clases RegistroPedidos y MatrizCasilleros
         RegistroPedidos  registros = new RegistroPedidos();
-        MatrizCasilleros matrizCasilleros = new MatrizCasilleros(10, 20);
+        MatrizCasilleros matrizCasilleros = new MatrizCasilleros(filasMatriz, columnasMatriz);
 
         // Creacion de los hilos de procesos y de Log
         Thread hiloLog = new Thread(new Log(matrizCasilleros, registros, demoraLog););
@@ -28,16 +29,16 @@ public class main {
         for(int i = 0; i < 10; i++){
             switch(i) {
                 case 0: case 1: case 2: // Preparacion de pedidos
-                    hilos[i] = new Thread(new PreparacionPedido(listaDePedidos, demoraPreparacion, matrizCasilleros, cantidadPedidosMax));
+                    hilos[i] = new Thread(new PreparacionPedido(registros, demoraPreparacion, matrizCasilleros, cantidadPedidosMax));
                     break;
                 case 3: case 4: // Despacho de pedidos
-                    hilos[i] = new Thread(new DespachoPedido(listaDePedidos, demoraDespacho, matrizCasilleros, probErrorDespacho));
+                    hilos[i] = new Thread(new DespachoPedido(registros, demoraDespacho, matrizCasilleros, probErrorDespacho));
                     break;
                 case 5: case 6: case 7: // Entrega al cliente
-                    hilos[i] = new Thread(new EntregaCliente(listaDePedidos, demoraEntregas, probErrorEntregas));
+                    hilos[i] = new Thread(new EntregaCliente(registros, demoraEntregas, probErrorEntregas));
                     break;
                 case 8: case 9: // Verificación final
-                    hilos[i] = new Thread(new VerificacionFinal(listaDePedidos, demoraVerificacion, probErrorVerificacion);
+                    hilos[i] = new Thread(new VerificacionFinal(registros, demoraVerificacion, probErrorVerificacion);
                     break;
             }
         }
@@ -57,12 +58,9 @@ public class main {
             }
         }
 
-        // Esperar que termine el hilo de Log
-        try {
-            hiloLog.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        // Detiene el hilo logger
+        Log.detener();
+        hiloLog.join();
 
         System.out.println("\n---------------- Simulación finalizada ----------------\n");
     }

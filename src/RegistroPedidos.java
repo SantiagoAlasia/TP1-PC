@@ -8,13 +8,14 @@ public class RegistroPedidos(){
     Queue<Pedido> pedidosFallidos;
     Queue<Pedido> pedidosVerificados
 
+    // Constructor: Inicializa toda las Colas
     public static RegistroPedidos(){
         pedidosEnPreparacion = new ArrayDeque<>();
         pedidosEnTransito = new ArrayDeque<>();
         pedidosEntregados = new ArrayDeque<>();
         pedidosFallidos = new ArrayDeque<>();
         pedidosVerificados = new ArrayDeque<>();
-    };
+    }
 
     // Agrega el pedido a la lista destino
     // Si destino == 0 => Pedidos en preparacion
@@ -104,5 +105,4 @@ public class RegistroPedidos(){
                 break;
         }
     }
-
 }

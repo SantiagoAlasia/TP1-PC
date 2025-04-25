@@ -4,23 +4,20 @@ public class MatrizCasilleros {
     private final Casillero[][] matriz; // Matriz de casilleros, estara limitada a lo pedido por consigna
     private final int filas;
     private final int columnas;
-    private Random random;
 
+    // Constructor: Crea la matriz del tamaño especificado y la carga de casilleros
     public MatrizCasilleros(int filas, int columnas) {
         this.filas = filas;
         this.columnas = columnas;
         matriz = new Casillero[filas][columnas];
-        random = new Random();
         inicializarCasilleros();
     }
 
-    // Inicializa todos los casilleros de la matriz como vacios y les asigna un id
+    // Inicializa todos los casilleros de la matriz como vacios
     private void inicializarcasilleros() {
-        int idCasillero = 0;
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
                 matriz[i][j] = new Casillero(idCasillero);
-                idCasillero++;
             }
         }
     }
@@ -48,15 +45,11 @@ public class MatrizCasilleros {
         return matriz;
     }
 
-    public int getCantFilas(){
+    public int getFilas(){
         return filas;
     }
 
     public int getColumnas() {
         return columnas;
-    }
-
-    public void setCasillero(int[] posicion, EstadoCasillero estado) {
-        matriz[posicion[0]] [posicion[1]]
     }
 }

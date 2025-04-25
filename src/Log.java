@@ -49,7 +49,7 @@ public class Log implements Runnable {
                     Casillero c = matriz[i][j];
 
                     // cuantas veces el casillero fue ocupado y su estado final
-                    log.println("Casillero [" + i + "][" + j + "]: " + c.getEstado());
+                    log.println("Casillero [" + i + "][" + j + "]: " + c.toString());
                 }
             }
             //tiempo total de ejecucion
@@ -64,5 +64,4 @@ public class Log implements Runnable {
             //si hubo un error al escribir el archivo o al dormir el hilo lo mostramos
         }
     }
-
 }

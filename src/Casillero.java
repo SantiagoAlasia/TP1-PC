@@ -1,29 +1,29 @@
 public class Casillero {
-    private final int id;
     private EstadoCasillero estado;
     private int contador;
 
-    public Casillero(int id) {
-        this.id = id;
+    // Constructor: Inicializa el contador y setea el estado en vacio
+    public Casillero() {
         this.estado = EstadoCasillero.VACIO;
         this.contador = 0;
     }
 
-    public int getId() {
-        return id;
+    public EstadoCasillero getEstado(){
+        return estado;
     }
 
-    public String getEstado() {
+    public String toString() {
         return "ocupado " + contador + " veces, con estado final: " + estado ;
     }
 
+    // Cambia el estado si es que es valido el cambio
     public boolean ocupar() {
         if (estado = EstadoCasillero.VACIO){
             estado = EstadoCasillero.OCUPADO;
             contador++;
             return true;
         }
-        return false;
+        return false; // No es posible cambiar de estado
     }
 
     public void liberar() {

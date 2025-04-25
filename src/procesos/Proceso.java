@@ -5,7 +5,7 @@ public abstract class Procesos implements Runnable{
 
     public Proceso(int demora, RegistroPedidos registros, int cantiadaPedidos){
         this.demora = demora;
-        this.registros = lregistros;
+        this.registros = registros;
         this.cantidadPedidosMax = cantiadaPedidos;
     }
 

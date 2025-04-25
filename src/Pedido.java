@@ -1,26 +1,21 @@
 public class Pedido {
-    private final int id; // Identificador del pedido
-    private int idCasillero; // Identificador del casillero asociado al pedido
-    private int idUsuario;  // Indicador del Usuario que creo el pedido
+    private int[] posicionCasillero; // Posicion del casillero asociado al pedido
+    private final int idUsuario;  // Indicador del Usuario que creo el pedido
 
-    public Pedido(int id, int idUsuario) {
-        this.id = id;
+    // Constructor: Guarda el id del usuario que lo creo
+    public Pedido(int idUsuario) {
         this.idUsuario = idUsuario;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public int getIdUsuario(){
         return idUsuario;
     }
 
-    public int getIdCasillero() {
-        return idCasillero;
+    public int getPosicionCasillero() {
+        return posicionCasillero;
     }
 
-    public void setIdCasillero(int idCasillero) {
-        this.idCasillero = idCasillero;
+    public void setPosicionCasillero(int[] posicionCasillero) {
+        this.posicionCasillero = posicionCasillero;
     }
 }
