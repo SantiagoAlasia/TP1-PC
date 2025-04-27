@@ -14,7 +14,7 @@ public class Entrega extends Proceso{
 
     @Override
     public void run() {
-        while (registros.getCantidadPedidos(5) < cantidadPedidosMax || (registros.getCantidadPedidos(0) + registros.getCantidadPedidos(1)) != 0) {
+        while (getPedidosIngresado() < cantidadPedidosMax || (registros.getCantidadPedidos(0) + registros.getCantidadPedidos(1)) != 0) {
             try{
                 Pedido pedido = registros.eliminarPedido(1); // Trata de eliminar un pedido de la cola de Pedidos en Transito
 

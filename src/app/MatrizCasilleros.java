@@ -43,6 +43,7 @@ public class MatrizCasilleros {
 
                 if (!casilleroDisponible){
                     System.out.println("(Preparacion): Se quiso ocupar un casillero que ya estaba ocupado");
+                    return error;
                 }
 
                 return posicion;

@@ -28,7 +28,7 @@ public class Casillero {
     public synchronized boolean ocupar() {
         if (estado == EstadoCasillero.VACIO){
             estado = EstadoCasillero.OCUPADO;
-            contador = contador + 1;
+            contador ++;
             return true;
         }
         return false; // No es posible cambiar de estado

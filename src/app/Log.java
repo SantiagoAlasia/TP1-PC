@@ -30,20 +30,23 @@ public class Log implements Runnable {
         try (
                 //abrimos un archivo para escribir el log
                 PrintWriter log = new PrintWriter(new FileWriter ("./data/log.txt"))
-        ){
+        ) {
+            log.println("-------------------- Muestras de los registros cada " + demora +" ms --------------------\n");
             //mientras el sistema siga ejecutando
             while (ejecutar) {
                 //Obtenemos la cantidad actual de pedidos fallidos y verificados
-                int fallidos = registros.getCantidadPedidos (3);
-                int verificados = registros.getCantidadPedidos (4);
+                int fallidos = registros.getCantidadPedidos(3);
+                int verificados = registros.getCantidadPedidos(4);
 
-                //Escribimos una linea con esos valores
+                // Escribimos una linea con esos valores. Se puede dar el caso que la suma de los valores de Fallidos +
+                // Verificados no de 500 al final. Esto es porque los hilos del proceso verificacion terminan antes de
+                // que el hilo Log se despierte.
                 log.println("Fallidos: " + fallidos + "      Verificados: " + verificados);
                 log.flush(); //forzamos que escriba el archivo sin esperar
-                Thread.sleep (demora); //esperamos 200 ms antes de repetir
+                Thread.sleep(demora); //esperamos 200 ms antes de repetir
             }
             // cuando el hilo se detiene escribimos estadísticas finales
-            log.println("\n-------------------------------- Estadísticas Finales --------------------------------");
+            log.println("\n-------------------------------- Estadísticas Finales --------------------------------\n");
 
             Casillero[][] matriz = matrizCasilleros.getMatriz(); //obtenemos la matriz completa
 
@@ -58,9 +61,9 @@ public class Log implements Runnable {
                 for (int j = 0; j < matrizCasilleros.getColumnas(); j++) {
                     Casillero c = matriz[i][j];
 
-                    if(c.getEstado() == EstadoCasillero.VACIO){
+                    if (c.getEstado() == EstadoCasillero.VACIO) {
                         cantidadVacios = cantidadVacios + 1;
-                    } else if (c.getEstado() == EstadoCasillero.OCUPADO){
+                    } else if (c.getEstado() == EstadoCasillero.OCUPADO) {
                         cantidadOcupados = cantidadOcupados + 1;
                     } else {
                         cantidadFueraDeServicio = cantidadFueraDeServicio + 1;
@@ -80,13 +83,22 @@ public class Log implements Runnable {
             log.println("Cantidad de Fuera De Servicio al final: " + cantidadFueraDeServicio);
             log.println("Cantidad de Vacios al final: " + cantidadVacios);
 
+            log.println("\n--------------------------------------------------------------------------------------\n");
+
+            // Valores de interes finales de las colas de pedidos
+            log.println("Cantidad de pedidos en la cola de Pedidos en Preparacion: " + registros.getCantidadPedidos(0));
+            log.println("Cantidad de pedidos en la cola de Pedidos en Transito: " + registros.getCantidadPedidos(1));
+            log.println("Cantidad de pedidos en la cola de Pedidos Entregados:" + registros.getCantidadPedidos(2));
+            log.println("Cantidad de pedidos en la cola de Pedidos Fallidos: " + registros.getCantidadPedidos(3));
+            log.println("Cantidad de pedidos en la cola de Pedidos Verificados: " + registros.getCantidadPedidos(4));
+
             log.println("\n--------------------------------------------------------------------------------------");
 
             //Tiempo total de ejecucion
             long fin = System.currentTimeMillis();
             long duracion = fin - inicio;
             log.println("\nTiempo total de ejecucion "+ duracion+"ms");
-
+            log.println("\n--------------------------------------------------------------------------------------\n");
 
         } catch (IOException | InterruptedException e){
             e.printStackTrace();

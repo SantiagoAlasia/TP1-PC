@@ -76,7 +76,6 @@ public class RegistroPedidos {
     //    destino == 2 => Pedidos Entregados
     //    destino == 3 => Pedidos Fallidos
     //    destino == 4 => Pedidos Verificados
-    //    destino == 5 => Total de pedidos
     public synchronized int getCantidadPedidos(int destino){
         switch(destino){
             case 0:
@@ -89,8 +88,6 @@ public class RegistroPedidos {
                 return pedidosFallidos.size();
             case 4:
                 return pedidosVerificados.size();
-            case 5:
-                return (pedidosEnPreparacion.size() + pedidosEnTransito.size() + pedidosEntregados.size() + pedidosFallidos.size() + pedidosVerificados.size());
             default:
                 return -1;
         }

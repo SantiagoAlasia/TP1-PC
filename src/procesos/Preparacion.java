@@ -18,7 +18,8 @@ public class Preparacion extends Proceso{
 
     @Override
     public void run() {
-        while (registros.getCantidadPedidos(5) < cantidadPedidosMax) {
+        while (getPedidosIngresado() < cantidadPedidosMax) {
+            incrementarPedidosIngresado(); // Incremeta la cantidad de pedidos que existen en el sistema
             usuario = new Usuarios(); // Simula la llegada de un usuario
             Pedido pedido = usuario.getPedido();// Obtiene el pedido que tiene el usuario
 

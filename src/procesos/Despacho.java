@@ -17,7 +17,7 @@ public class Despacho extends  Proceso {
 
     @Override
     public void run() {
-        while (registros.getCantidadPedidos(5) < cantidadPedidosMax || registros.getCantidadPedidos(0) != 0) {
+        while (getPedidosIngresado() < cantidadPedidosMax || registros.getCantidadPedidos(0) != 0) {
             try{
                 Pedido pedido = registros.eliminarPedido(0); // Trata de eliminar un pedido de la cola de Pedidos en Preparacion
                 int [] posicion = pedido.getPosicionCasillero(); // Busca la posicion del casillero vinculado al pedido seleccionado
