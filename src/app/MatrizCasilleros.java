@@ -30,7 +30,7 @@ public class MatrizCasilleros {
     // Si no se encuentran casilleros, se retornara {-1, -1}
     public synchronized int[] getPosicionCasilleroDisponible() {
         int [] posicion  = {0, 0};
-        int [] error = {-1, -1};
+        int error [] = {-1, -1};
         Random random = new Random();
 
         for (int intento = 0; intento < 500; intento++) {
@@ -52,7 +52,7 @@ public class MatrizCasilleros {
         return error;
     }
 
-    // Para la estadistica, metodo para obtener todos la matriz de casilleros
+    // Para la estadistica, metodo para obtener toda la matriz de casilleros
     public synchronized Casillero[][] getMatriz() {
         return matriz;
     }

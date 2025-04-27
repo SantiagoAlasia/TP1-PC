@@ -9,10 +9,6 @@ public class Pedido {
         this.idUsuario = idUsuario;
     }
 
-    public synchronized int getIdUsuario(){
-        return idUsuario;
-    }
-
     public synchronized int [] getPosicionCasillero() {
         return posicionCasillero;
     }
