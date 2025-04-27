@@ -56,15 +56,15 @@ public class RegistroPedidos {
     public synchronized Pedido eliminarPedido(int destino){
         switch(destino){
             case 0:
-                return  pedidosEnPreparacion.remove();
+                return  pedidosEnPreparacion.poll();
             case 1:
-                return pedidosEnTransito.remove();
+                return pedidosEnTransito.poll();
             case 2:
-                return pedidosEntregados.remove();
+                return pedidosEntregados.poll();
             case 3:
-                return pedidosFallidos.remove();
+                return pedidosFallidos.poll();
             case 4:
-                return pedidosVerificados.remove();
+                return pedidosVerificados.poll();
             default:
                 return null;
         }

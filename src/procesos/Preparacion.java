@@ -4,14 +4,13 @@ import app.MatrizCasilleros;
 import app.Usuarios;
 import app.RegistroPedidos;
 import app.Pedido;
-import app.Casillero;
 
 
 public class Preparacion extends Proceso{
     private MatrizCasilleros matrizCasilleros;
     private Usuarios usuario;
 
-    // Constructor: Llama al cosntructor de la clase Proceso y setea sus atributos adicionales
+    // Constructor: Llama al constructor de la clase Proceso y setea sus atributos adicionales
     public Preparacion(RegistroPedidos registros, int demora, MatrizCasilleros matrizCasilleros, int cantidadPedidos) {
         super(demora, registros, cantidadPedidos);
         this.matrizCasilleros = matrizCasilleros;
@@ -22,15 +21,32 @@ public class Preparacion extends Proceso{
         while (registros.getCantidadPedidos(5) < cantidadPedidosMax) {
             usuario = new Usuarios(); // Simula la llegada de un usuario
             Pedido pedido = usuario.getPedido();// Obtiene el pedido que tiene el usuario
-            int posicion[] = matrizCasilleros.obtenerPosicionCasilleroDisponible(); // Pide la posicion de un casillero VACIO
 
-            if (matrizCasilleros.ocuparCasillero(posicion)) {
-                registros.agregarPedido(pedido, 0);
-            } else {
-                System.out.println("Asignacion de un pedido a un casillero no Vacio");  // Imprimir q el casillero no es valido
+            try {
+                int error [] = {-1, -1};
+                int posicion [] = error;
+
+                // Busca un casillero que este VACIO, lo ocupa y devuelve la posicion del casillero
+                while(posicion == error) {
+                    posicion = matrizCasilleros.getPosicionCasilleroDisponible();
+
+                    if (posicion == error) {
+                        System.out.println("(Preparacion): No se encontro una posicion de casillero valida");
+                    }
+                }
+
+                pedido.setPosicionCasillero(posicion); // Le asigna la posicion del casillero al pedido
+                registros.agregarPedido(pedido, 0); // Agrega el pedido a la cola Pedidos en preparacion
+
+                demorar(); // Manda al hilo a dormir
+            }catch (Exception e) {
+                //System.out.println("(Preparacion): No se pudo asignar el pedido a ningun casillero");
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e2) {
+                    Thread.currentThread().interrupt();
+                }
             }
-
-            demorar(); // Manda al hilo a dormir
         }
     }
 }

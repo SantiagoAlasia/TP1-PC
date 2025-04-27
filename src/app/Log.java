@@ -43,18 +43,46 @@ public class Log implements Runnable {
                 Thread.sleep (demora); //esperamos 200 ms antes de repetir
             }
             // cuando el hilo se detiene escribimos estadísticas finales
-            log.println("\n --- Estadísticas Finales ---");
+            log.println("\n-------------------------------- Estadísticas Finales --------------------------------");
 
             Casillero[][] matriz = matrizCasilleros.getMatriz(); //obtenemos la matriz completa
+
+            int cantidadOcupados = 0;
+            int cantidadFueraDeServicio = 0;
+            int cantidadVacios = 0;
+
+            int ocupaciones = 0;
+
+            // Recompila datos de los casilleros
             for (int i = 0; i < matrizCasilleros.getFilas(); i++) {
                 for (int j = 0; j < matrizCasilleros.getColumnas(); j++) {
                     Casillero c = matriz[i][j];
+
+                    if(c.getEstado() == EstadoCasillero.VACIO){
+                        cantidadVacios = cantidadVacios + 1;
+                    } else if (c.getEstado() == EstadoCasillero.OCUPADO){
+                        cantidadOcupados = cantidadOcupados + 1;
+                    } else {
+                        cantidadFueraDeServicio = cantidadFueraDeServicio + 1;
+                    }
+
+                    ocupaciones = ocupaciones + c.getContador();
 
                     // cuantas veces el casillero fue ocupado y su estado final
                     log.println("app.Casillero [" + i + "][" + j + "]: " + c.toString());
                 }
             }
-            //tiempo total de ejecucion
+            log.println("\n--------------------------------------------------------------------------------------\n");
+
+            // Valores de interes finales de los casilleros
+            log.println("Cantidad de ocupaciones Totales: " + ocupaciones);
+            log.println("Cantidad de Ocupados al final: " + cantidadOcupados);
+            log.println("Cantidad de Fuera De Servicio al final: " + cantidadFueraDeServicio);
+            log.println("Cantidad de Vacios al final: " + cantidadVacios);
+
+            log.println("\n--------------------------------------------------------------------------------------");
+
+            //Tiempo total de ejecucion
             long fin = System.currentTimeMillis();
             long duracion = fin - inicio;
             log.println("\nTiempo total de ejecucion "+ duracion+"ms");

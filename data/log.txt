@@ -1,62 +1,329 @@
 Fallidos: 0      Verificados: 0
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
-Fallidos: 1      Verificados: 1
+Fallidos: 1      Verificados: 4
+Fallidos: 1      Verificados: 7
+Fallidos: 2      Verificados: 10
+Fallidos: 2      Verificados: 14
+Fallidos: 2      Verificados: 18
+Fallidos: 3      Verificados: 21
+Fallidos: 4      Verificados: 24
+Fallidos: 6      Verificados: 26
+Fallidos: 7      Verificados: 29
+Fallidos: 8      Verificados: 32
+Fallidos: 9      Verificados: 35
+Fallidos: 10      Verificados: 38
+Fallidos: 12      Verificados: 40
+Fallidos: 12      Verificados: 44
+Fallidos: 13      Verificados: 47
+Fallidos: 15      Verificados: 49
+Fallidos: 16      Verificados: 52
+Fallidos: 17      Verificados: 55
+Fallidos: 17      Verificados: 59
+Fallidos: 18      Verificados: 62
+Fallidos: 19      Verificados: 65
+Fallidos: 20      Verificados: 68
+Fallidos: 22      Verificados: 70
+Fallidos: 22      Verificados: 74
+Fallidos: 23      Verificados: 77
+Fallidos: 24      Verificados: 80
+Fallidos: 26      Verificados: 82
+Fallidos: 26      Verificados: 86
+Fallidos: 26      Verificados: 90
+Fallidos: 28      Verificados: 92
+Fallidos: 29      Verificados: 95
+Fallidos: 31      Verificados: 97
+Fallidos: 32      Verificados: 100
+Fallidos: 32      Verificados: 104
+Fallidos: 33      Verificados: 107
+Fallidos: 34      Verificados: 110
+Fallidos: 36      Verificados: 112
+Fallidos: 39      Verificados: 113
+Fallidos: 40      Verificados: 116
+Fallidos: 41      Verificados: 119
+Fallidos: 41      Verificados: 123
+Fallidos: 44      Verificados: 124
+Fallidos: 45      Verificados: 127
+Fallidos: 45      Verificados: 131
+Fallidos: 45      Verificados: 135
+Fallidos: 45      Verificados: 139
+Fallidos: 46      Verificados: 142
+Fallidos: 49      Verificados: 143
+Fallidos: 51      Verificados: 145
+Fallidos: 51      Verificados: 149
+Fallidos: 53      Verificados: 151
+Fallidos: 55      Verificados: 153
+Fallidos: 58      Verificados: 154
+Fallidos: 60      Verificados: 156
+Fallidos: 62      Verificados: 158
+Fallidos: 65      Verificados: 159
+Fallidos: 66      Verificados: 162
+Fallidos: 67      Verificados: 165
+Fallidos: 67      Verificados: 169
+Fallidos: 68      Verificados: 172
+Fallidos: 68      Verificados: 176
+Fallidos: 71      Verificados: 177
+Fallidos: 72      Verificados: 180
+Fallidos: 74      Verificados: 182
+Fallidos: 75      Verificados: 185
+Fallidos: 75      Verificados: 189
+Fallidos: 75      Verificados: 193
+Fallidos: 77      Verificados: 195
+Fallidos: 77      Verificados: 199
+Fallidos: 77      Verificados: 203
+Fallidos: 78      Verificados: 206
+Fallidos: 80      Verificados: 208
+Fallidos: 80      Verificados: 212
+Fallidos: 81      Verificados: 215
+Fallidos: 81      Verificados: 219
+Fallidos: 82      Verificados: 222
+Fallidos: 83      Verificados: 225
+Fallidos: 84      Verificados: 228
+Fallidos: 86      Verificados: 230
+Fallidos: 86      Verificados: 234
+Fallidos: 87      Verificados: 237
+Fallidos: 87      Verificados: 241
+Fallidos: 88      Verificados: 244
+Fallidos: 89      Verificados: 247
+Fallidos: 89      Verificados: 251
+Fallidos: 92      Verificados: 252
+Fallidos: 94      Verificados: 254
+Fallidos: 95      Verificados: 258
+Fallidos: 96      Verificados: 261
+Fallidos: 97      Verificados: 266
+Fallidos: 100      Verificados: 269
+Fallidos: 102      Verificados: 274
+Fallidos: 105      Verificados: 275
+Fallidos: 105      Verificados: 280
+Fallidos: 109      Verificados: 284
+Fallidos: 109      Verificados: 288
+Fallidos: 110      Verificados: 292
+Fallidos: 113      Verificados: 297
+Fallidos: 115      Verificados: 300
+Fallidos: 116      Verificados: 304
+Fallidos: 118      Verificados: 308
+Fallidos: 120      Verificados: 313
+Fallidos: 121      Verificados: 318
+Fallidos: 126      Verificados: 321
+Fallidos: 126      Verificados: 325
+Fallidos: 126      Verificados: 330
+Fallidos: 126      Verificados: 335
+Fallidos: 126      Verificados: 339
+Fallidos: 126      Verificados: 344
+Fallidos: 127      Verificados: 347
+Fallidos: 129      Verificados: 350
+Fallidos: 131      Verificados: 352
+Fallidos: 131      Verificados: 357
+Fallidos: 131      Verificados: 361
+Fallidos: 132      Verificados: 365
+
+-------------------------------- Estadísticas Finales --------------------------------
+app.Casillero [0][0]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [0][1]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [0][2]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [0][3]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [0][4]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [0][5]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [0][6]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [0][7]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [0][8]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [0][9]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [0][10]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [0][11]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [0][12]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [0][13]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [0][14]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [0][15]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [0][16]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [0][17]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [0][18]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [0][19]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [1][0]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [1][1]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [1][2]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [1][3]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [1][4]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [1][5]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [1][6]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [1][7]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [1][8]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [1][9]: ocupado 3 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [1][10]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [1][11]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [1][12]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [1][13]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [1][14]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [1][15]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [1][16]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [1][17]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [1][18]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [1][19]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [2][0]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [2][1]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [2][2]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [2][3]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [2][4]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [2][5]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [2][6]: ocupado 4 veces, con estado final: VACIO
+app.Casillero [2][7]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [2][8]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [2][9]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [2][10]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [2][11]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [2][12]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [2][13]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [2][14]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [2][15]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [2][16]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [2][17]: ocupado 4 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [2][18]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [2][19]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [3][0]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [3][1]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [3][2]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [3][3]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [3][4]: ocupado 5 veces, con estado final: VACIO
+app.Casillero [3][5]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [3][6]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [3][7]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [3][8]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [3][9]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [3][10]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [3][11]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [3][12]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [3][13]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [3][14]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [3][15]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [3][16]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [3][17]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [3][18]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [3][19]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [4][0]: ocupado 3 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [4][1]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [4][2]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [4][3]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [4][4]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [4][5]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [4][6]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [4][7]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [4][8]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [4][9]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [4][10]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [4][11]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [4][12]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [4][13]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [4][14]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [4][15]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [4][16]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [4][17]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [4][18]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [4][19]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [5][0]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [5][1]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [5][2]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [5][3]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [5][4]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [5][5]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [5][6]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [5][7]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [5][8]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [5][9]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [5][10]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [5][11]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [5][12]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [5][13]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [5][14]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [5][15]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [5][16]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [5][17]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [5][18]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [5][19]: ocupado 3 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [6][0]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [6][1]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [6][2]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [6][3]: ocupado 3 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [6][4]: ocupado 3 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [6][5]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [6][6]: ocupado 4 veces, con estado final: VACIO
+app.Casillero [6][7]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [6][8]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [6][9]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [6][10]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [6][11]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [6][12]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [6][13]: ocupado 5 veces, con estado final: VACIO
+app.Casillero [6][14]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [6][15]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [6][16]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [6][17]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [6][18]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [6][19]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [7][0]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [7][1]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [7][2]: ocupado 3 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [7][3]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [7][4]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [7][5]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [7][6]: ocupado 4 veces, con estado final: VACIO
+app.Casillero [7][7]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [7][8]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [7][9]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [7][10]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [7][11]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [7][12]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [7][13]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [7][14]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [7][15]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [7][16]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [7][17]: ocupado 4 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [7][18]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [7][19]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [8][0]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [8][1]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [8][2]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [8][3]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [8][4]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [8][5]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [8][6]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [8][7]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [8][8]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [8][9]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [8][10]: ocupado 3 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [8][11]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [8][12]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [8][13]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [8][14]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [8][15]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [8][16]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [8][17]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [8][18]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [8][19]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [9][0]: ocupado 2 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [9][1]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [9][2]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [9][3]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [9][4]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [9][5]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [9][6]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [9][7]: ocupado 3 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [9][8]: ocupado 1 veces, con estado final: VACIO
+app.Casillero [9][9]: ocupado 3 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [9][10]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [9][11]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [9][12]: ocupado 3 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [9][13]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [9][14]: ocupado 2 veces, con estado final: VACIO
+app.Casillero [9][15]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [9][16]: ocupado 3 veces, con estado final: VACIO
+app.Casillero [9][17]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [9][18]: ocupado 1 veces, con estado final: FUERA_DE_SERVICIO
+app.Casillero [9][19]: ocupado 2 veces, con estado final: VACIO
+
+--------------------------------------------------------------------------------------
+
+Cantidad de ocupaciones Totales: 412
+Cantidad de Ocupados al final: 0
+Cantidad de Fuera De Servicio al final: 63
+Cantidad de Vacios al final: 137
+
+--------------------------------------------------------------------------------------
+
+Tiempo total de ejecucion 23364ms

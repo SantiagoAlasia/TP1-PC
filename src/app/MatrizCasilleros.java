@@ -25,22 +25,30 @@ public class MatrizCasilleros {
         }
     }
 
-    // Buscaremos de manera aleatoria casilleros que esten vacios y retornaremos la posicion dentro de la matriz
-    // Si no se encuentran casilleros, se retornara null
-    public synchronized int[] obtenerPosicionCasilleroDisponible() {
+    // Buscaremos de manera aleatoria casilleros que esten vacios
+    // Si encuentra casillero vacios, los ocupa y retornaremos la posicion dentro de la matriz
+    // Si no se encuentran casilleros, se retornara {-1, -1}
+    public synchronized int[] getPosicionCasilleroDisponible() {
         int [] posicion  = {0, 0};
+        int [] error = {-1, -1};
         Random random = new Random();
 
-        for (int intento = 0; intento < 200; intento++) {
+        for (int intento = 0; intento < 500; intento++) {
             posicion[0] = random.nextInt(filas);
             posicion[1] = random.nextInt(columnas);
             Casillero c = matriz[posicion[0]][posicion[1]];
 
             if (c.getEstado() == EstadoCasillero.VACIO){
+                boolean casilleroDisponible = c.ocupar();
+
+                if (!casilleroDisponible){
+                    System.out.println("(Preparacion): Se quiso ocupar un casillero que ya estaba ocupado");
+                }
+
                 return posicion;
             }
         }
-        return null;
+        return error;
     }
 
     // Para la estadistica, metodo para obtener todos la matriz de casilleros
@@ -56,10 +64,6 @@ public class MatrizCasilleros {
     // Unicamente lo utiliza el hiloLog por lo que no es nesesario usar SYNCRONIZED
     public int getColumnas() {
         return columnas;
-    }
-
-    public synchronized boolean ocuparCasillero(int[] posicion) {
-        return matriz[posicion[0]][posicion[1]].ocupar();
     }
 
     public synchronized void liberarCasillero(int[] posicion) {

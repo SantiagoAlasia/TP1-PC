@@ -14,15 +14,25 @@ public class Entrega extends Proceso{
 
     @Override
     public void run() {
-        while (registros.getCantidadPedidos(5) < cantidadPedidosMax && registros.getCantidadPedidos(0) + registros.getCantidadPedidos(1) != 0) {
-            Pedido pedido = registros.eliminarPedido(1);
+        while (registros.getCantidadPedidos(5) < cantidadPedidosMax || (registros.getCantidadPedidos(0) + registros.getCantidadPedidos(1)) != 0) {
+            try{
+                Pedido pedido = registros.eliminarPedido(1); // Trata de eliminar un pedido de la cola de Pedidos en Transito
 
-            if(Math.random() > probError){ // Actua en base a la probabilidad de error
-                registros.agregarPedido(pedido, 2);
-            } else{
-                registros.agregarPedido(pedido, 3);
+                if(Math.random() > probError){ // Actua en base a la probabilidad de error
+                    registros.agregarPedido(pedido, 2); // Agrega el pedido a la cola de Pedidos Entregados
+                } else{
+                    registros.agregarPedido(pedido, 3); // Agrega el pedido a la cola de Pedidos Fallidos
+                }
+
+                demorar(); // Manda al hilo a dormir
+            }catch(Exception e){ // Si no encuntra ningun pedido en la cola, duerme 1ms y vuelve a tratar
+                //System.out.println("(Entrega): Registro de Pedidos en Transito vacio. Esperando mas pedidos");
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e2) {
+                    Thread.currentThread().interrupt();
+                }
             }
-            demorar(); // Manda al hilo a dormir
         }
     }
 }
