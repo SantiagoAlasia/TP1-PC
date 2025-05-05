@@ -1,5 +1,6 @@
 package app;
 
+import java.io.File;
 import java.io.FileWriter; // Permite escribir texto en un archivo (crea o abre un archivo log.txt y prmite escribir un texto )
 import java.io.PrintWriter; //lo vamos a usar para escribir el log linea por linea de forma legible
 import java.io.IOException; // usamos el try/catch para atrapar error al abir o escribir el log.txt
@@ -18,6 +19,13 @@ public class Log implements Runnable {
         this.registros = registros;
         this.inicio = System.currentTimeMillis(); // guarda el tiempo de inicio en milisegundos
         this.demora = demora;
+
+        // Chequeamos que la carpeta "data", donde vamos a guardar el log, exista.
+        // Si no existe, la creamos.
+        File carpetaData = new File("data");
+        if (!carpetaData.exists()) {
+            carpetaData.mkdir();
+        }
     }
 
     //Metodo que permite detener el hilo desde afuera
