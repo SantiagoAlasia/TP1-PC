@@ -14,8 +14,4 @@ public class Usuarios{
     public Pedido getPedido() {
         return pedido;
     }
-
-    public int getId() {
-        return id;
-    }
 }

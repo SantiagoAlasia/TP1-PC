@@ -16,10 +16,10 @@ public class Main {
     private static final double probErrorVerificacion = 0.05;
 
     // Definimos los tiempos para cada proceso
-    private static final int demoraPreparacion = 75;
-    private static final int demoraDespacho = 100;
-    private static final int demoraEntregas = 130;
-    private static final int demoraVerificacion = 75;
+    private static final int demoraPreparacion = 70;
+    private static final int demoraDespacho = 90;
+    private static final int demoraEntregas = 50;
+    private static final int demoraVerificacion = 40;
     private static final int demoraLog = 200; //200ms
 
     // Constructor: Instancia los objetos y lanza los hilos
