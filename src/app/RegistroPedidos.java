@@ -10,6 +10,12 @@ public class RegistroPedidos {
     Queue<Pedido> pedidosFallidos;
     Queue<Pedido> pedidosVerificados;
 
+    private final Object lock1 = new Object();
+    private final Object lock2 = new Object();
+    private final Object lock3 = new Object();
+    private final Object lock4 = new Object();
+    private final Object lock5 = new Object();
+
     // Constructor: Inicializa todas las Colas
     public RegistroPedidos(){
         pedidosEnPreparacion = new ArrayDeque<>();
@@ -25,22 +31,32 @@ public class RegistroPedidos {
     //    destino == 2 => Pedidos Entregados
     //    destino == 3 => Pedidos Fallidos
     //    destino == 4 => Pedidos Verificados
-    public synchronized void agregarPedido(Pedido pedido, int destino){
+    public void agregarPedido(Pedido pedido, int destino){
         switch(destino){
             case 0:
-                pedidosEnPreparacion.add(pedido);
+                synchronized (lock1) {
+                    pedidosEnPreparacion.add(pedido);
+                }
                 break;
             case 1:
-                pedidosEnTransito.add(pedido);
+                synchronized (lock2) {
+                    pedidosEnTransito.add(pedido);
+                }
                 break;
             case 2:
-                pedidosEntregados.add(pedido);
+                synchronized (lock3) {
+                    pedidosEntregados.add(pedido);
+                }
                 break;
             case 3:
-                pedidosFallidos.add(pedido);
+                synchronized (lock4) {
+                    pedidosFallidos.add(pedido);
+                }
                 break;
             case 4:
-                pedidosVerificados.add(pedido);
+                synchronized (lock5) {
+                    pedidosVerificados.add(pedido);
+                }
                 break;
             default:
                 break;
@@ -53,18 +69,28 @@ public class RegistroPedidos {
     //    destino == 2 => Pedidos Entregados
     //    destino == 3 => Pedidos Fallidos
     //    destino == 4 => Pedidos Verificados
-    public synchronized Pedido eliminarPedido(int destino){
+    public Pedido eliminarPedido(int destino){
         switch(destino){
             case 0:
-                return  pedidosEnPreparacion.poll();
+                synchronized (lock1) {
+                    return  pedidosEnPreparacion.poll();
+                }
             case 1:
-                return pedidosEnTransito.poll();
+                synchronized (lock2) {
+                    return pedidosEnTransito.poll();
+                }
             case 2:
-                return pedidosEntregados.poll();
+                synchronized (lock3) {
+                    return pedidosEntregados.poll();
+                }
             case 3:
-                return pedidosFallidos.poll();
+                synchronized (lock4) {
+                    return pedidosFallidos.poll();
+                }
             case 4:
-                return pedidosVerificados.poll();
+                synchronized (lock5) {
+                    return pedidosVerificados.poll();
+                }
             default:
                 return null;
         }
@@ -76,18 +102,28 @@ public class RegistroPedidos {
     //    destino == 2 => Pedidos Entregados
     //    destino == 3 => Pedidos Fallidos
     //    destino == 4 => Pedidos Verificados
-    public synchronized int getCantidadPedidos(int destino){
+    public int getCantidadPedidos(int destino){
         switch(destino){
             case 0:
-                return pedidosEnPreparacion.size();
+                synchronized (lock1) {
+                    return pedidosEnPreparacion.size();
+                }
             case 1:
-                return pedidosEnTransito.size();
+                synchronized (lock2) {
+                    return pedidosEnTransito.size();
+                }
             case 2:
-                return pedidosEntregados.size();
+                synchronized (lock3) {
+                    return pedidosEntregados.size();
+                }
             case 3:
-                return pedidosFallidos.size();
+                synchronized (lock4) {
+                    return pedidosFallidos.size();
+                }
             case 4:
-                return pedidosVerificados.size();
+                synchronized (lock5) {
+                    return pedidosVerificados.size();
+                }
             default:
                 return -1;
         }
