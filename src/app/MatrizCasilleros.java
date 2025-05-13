@@ -28,7 +28,7 @@ public class MatrizCasilleros {
     // Buscaremos de manera aleatoria casilleros que esten vacios
     // Si encuentra casillero vacios, los ocupa y retornaremos la posicion dentro de la matriz
     // Si no se encuentran casilleros, se retornara {-1, -1}
-    public synchronized int[] getPosicionCasilleroDisponible() {
+    public int[] getPosicionCasilleroDisponible() {
         int [] posicion  = {0, 0};
         int error [] = {-1, -1};
         Random random = new Random();
@@ -52,8 +52,8 @@ public class MatrizCasilleros {
         return error;
     }
 
-    // Para la estadistica, metodo para obtener toda la matriz de casilleros
-    public synchronized Casillero[][] getMatriz() {
+    // Unicamente lo utiliza el hiloLog por lo que no es nesesario usar SYNCRONIZED
+    public Casillero[][] getMatriz() {
         return matriz;
     }
 
@@ -67,11 +67,11 @@ public class MatrizCasilleros {
         return columnas;
     }
 
-    public synchronized void liberarCasillero(int[] posicion) {
+    public void liberarCasillero(int[] posicion) {
         matriz[posicion[0]][posicion[1]].liberar();
     }
 
-    public synchronized void marcarCasilleroFueraDeServicio(int[] posicion) {
+    public void marcarCasilleroFueraDeServicio(int[] posicion) {
         matriz[posicion[0]][posicion[1]].marcarFueraDeServicio();
     }
 }

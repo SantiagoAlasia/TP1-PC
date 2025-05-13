@@ -1,14 +1,11 @@
 package procesos;
 
 import app.MatrizCasilleros;
-import app.Usuarios;
 import app.RegistroPedidos;
 import app.Pedido;
 
-
 public class Preparacion extends Proceso{
     private MatrizCasilleros matrizCasilleros;
-    private Usuarios usuario;
 
     // Constructor: Llama al constructor de la clase Proceso y setea sus atributos adicionales
     public Preparacion(RegistroPedidos registros, int demora, MatrizCasilleros matrizCasilleros, int cantidadPedidos) {
@@ -20,8 +17,7 @@ public class Preparacion extends Proceso{
     public void run() {
         while (getPedidosIngresado() < cantidadPedidosMax) {
             incrementarPedidosIngresado(); // Incremeta la cantidad de pedidos que existen en el sistema
-            usuario = new Usuarios(); // Simula la llegada de un usuario
-            Pedido pedido = usuario.getPedido();// Obtiene el pedido que tiene el usuario
+            Pedido pedido = new Pedido();
 
             int error [] = {-1, -1};
             int posicion [] = error;
