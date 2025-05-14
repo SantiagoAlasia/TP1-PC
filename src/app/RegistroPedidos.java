@@ -10,11 +10,11 @@ public class RegistroPedidos {
     Queue<Pedido> pedidosFallidos;
     Queue<Pedido> pedidosVerificados;
 
-    private final Object lock1 = new Object();
-    private final Object lock2 = new Object();
-    private final Object lock3 = new Object();
-    private final Object lock4 = new Object();
-    private final Object lock5 = new Object();
+    private Object lock1 = new Object();
+    private Object lock2 = new Object();
+    private Object lock3 = new Object();
+    private Object lock4 = new Object();
+    private Object lock5 = new Object();
 
     // Constructor: Inicializa todas las Colas
     public RegistroPedidos(){
